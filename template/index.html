@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+<div class="content">
+    <h1 style="text-align: center">Patient details</h1>
+
+    <div class="form">
+        <form action="/" method="POST">
+            <div>
+            <label for = 'First name'>First Name:</label>
+            <input name = 'content_fname' id = 'First Name'type="text" placeholder ='John'required ></input>
+            <label for = 'Last Name'>Last Name:</label>
+            <input name = 'content_lname' id = 'Last Name'type="text" placeholder ='Smith' required ></input>
+            <div>
+            <label >Age</label>
+            <input name = 'age' id = 'age'type="text" placeholder ='24' required ></input>
+                <label >Height in cm</label>
+            <input name = 'height' id = 'Height'type="text" placeholder ='175' required ></input>
+                <label >Weight in kilogram</label>
+            <input name = 'weight' id = 'Weight'type="text" placeholder ='56' required ></input>
+            </div>
+
+
+            </div>
+            <div>
+                <input type="radio" name="gender" value="male" required >Male</input>
+                <input type="radio" name="gender" value="female" required>Female</input>
+            </div>
+
+            <div>
+                <label >Systolic blood pressure </label>
+                <input name = 'sbp' id = 'SBP'type="text" placeholder ='SBP high' required ></input>
+                <label >Diastolic blood pressure</label>
+                <input name = 'dbp' id = 'dbp'type="text" placeholder ='DBP low' required ></input>
+
+                <select name = 'cholesterol'><option  > Cholesterol	</option>
+                    <option>Normal</option>
+                    <option>Above normal</option>
+                    <option>Well above normal</option>
+                </select>
+                <select name = 'glucose'><option> Glucose	</option>
+                    <option>Normal</option>
+                    <option>Above normal</option>
+                    <option>Well above normal</option>
+                </select>
+                <div>
+                <input type="radio" name="smoke" value="yes" required>Yes,I smoke</input>
+                <input type="radio" name="smoke" value="no">No,I don't smoke</input>
+                </div>
+
+                <div>
+                <input type="radio" name="drink" value="yes" required>Yes,I consume Alcohol</input>
+                <input type="radio" name="drink" value="no" required>No,I don't consume Alcohol</input>
+                </div>
+
+                <div>
+                <input type="radio" name="activity" value="yes" required>Yes,I do physical activities</input>
+                <input type="radio" name="activity" value="no" required>No,I don't do physical activities</input>
+                </div>
+            </div>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
+<!--1.	Age | Objective Feature | age | int (days)-->
+<!--2.	Height | Objective Feature | height | int (cm) |-->
+<!--3.	Weight | Objective Feature | weight | float (kg) |-->
+<!--4.	Gender | Objective Feature | gender | categorical code |-->
+<!--5.	Systolic blood pressure | Examination Feature | ap_hi | int |-->
+<!--6.	Diastolic blood pressure | Examination Feature | ap_lo | int |-->
+<!--7.	Cholesterol | Examination Feature | cholesterol | 1: normal, 2: above normal, 3: well above normal |-->
+<!--8.	Glucose | Examination Feature | gluc | 1: normal, 2: above normal, 3: well above normal |-->
+<!--9.	Smoking | Subjective Feature | smoke | binary |-->
+<!--10.	Alcohol intake | Subjective Feature | alco | binary |-->
+<!--11.	Physical activity | Subjective Feature | active | binary |-->
+<!--12.	Presence or absence of cardiovascular disease | Target Variable | cardio | binary |-->
